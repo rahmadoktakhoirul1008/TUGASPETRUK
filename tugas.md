@@ -8,7 +8,7 @@ int main(){
 int carikata,cek,ditemukan;
 ditemukan=0;
 char input[100];
-cout<<"\tFIND WORD"<<endl;
+cout<<"\tGAME FIND WORD"<<endl;
 char kata[15][15]={ 				{'t','g','b','w','w','i','n','t','e','r','w','s','e','s','n'},
 						{'a','a','u','n','t','t','m','m','h','f','o','o','d','n','b'},
 						{'j','l','w','c','q','l','d','z','m','p','m','v','d','m','r'},
@@ -35,7 +35,7 @@ cout<<endl;
 	
 	
 	
-	///////// 
+	///////////////////////// 
 	
 cout<<endl;cout<<"masukkan 3 kata"<<endl;
 for(int i=0;i<3;i++){							//input kata
@@ -116,5 +116,38 @@ for (int k=0;k<carikata;k++){						///Vertikal ATAS
 	ditemukan+=0;
 	}
 	cek=0;
+
+for (int k=0;k<carikata;k++){										///DIAGONAL KIRI ATAS
+					if (input[k]==kata[i-k][j-k]){
+						cek=k;
+					}
+					else{
+						break;
+					}
+				}
+				if (cek==carikata-1){
+					ditemukan+=1;
+				}
+				else{
+					ditemukan+=0;
+				}
+				cek=0;
+				
+			
+for (int k=0;k<carikata;k++){											//DIAGONAL KANAN ATAS
+					if (input[k]==kata[i-k][j+k]){
+						cek=k;
+					}
+					else{
+						break;
+					}
+				}
+				if (cek==carikata-1){
+					ditemukan+=1;
+				}
+				else{
+					ditemukan+=0;
+				}
+				cek=0;
 				
 				
