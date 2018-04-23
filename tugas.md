@@ -7,7 +7,7 @@ int main () {
   int cari_kata,in,ditemukan,cek;
 	ditemukan=0;
 	char input[50];
-	char matriks[15][15]={ {'t','g','b','w','w','i','n','t','e','r','w','s','e','s','n'},
+	char kata[15][15]={ {'t','g','b','w','w','i','n','t','e','r','w','s','e','s','n'},
 				{'a','a','u','n','t','t','m','m','h','f','o','o','d','n','b'},
 				{'j','l','w','c','q','l','d','z','m','p','m','v','d','m','r'},
 				{'a','s','a','g','m','q','u','w','v','v','b','s','o','h','i'},
@@ -23,7 +23,51 @@ int main () {
 				{'p','d','c','r','z','m','s','n','g','r','d','n','r','p','z'},
 				{'o','h','n','k','z','w','a','t','e','r','j','g','t','r','a'}
 				};
-						
+	for(int i=0;i<15;i++){
+		for(int j=0;j<15;j++){
+		cout<<kata[i][j]<<" ";
+		}
+		cout<<endl;
+	}
+	
+	cout<<"Masukan Ada : ";cin>>input;
+	cari_kata=strlen(input);
+	
 
-
+  for (int i=0;i<15;i++){
+		for (int j=0;j<15;j++){
+			if (input[0]==kata[i][j]){
+				///HORIZONTAL KANAN ->
+				for (int a=0;a<cari_kata;a++){
+					if (input[a]==kata[i][j+a]){
+						cek=a;
+					}
+					else{
+						break;
+					}
+				}
+				if (cek==cari_kata-1){
+					ditemukan+=1;
+				}
+				else{
+					ditemukan+=0;
+				}
+				cek=0;
+				
+				///HORIZONTAL KIRI <-
+				for (int k=0;k<cari_kata;k++){
+					if (input[k]==kata[i][j-k]){
+						cek=k;
+					}
+					else{
+						break;
+					}
+				}
+				if (cek==cari_kata-1){
+					ditemukan+=1;
+				}
+				else{
+					ditemukan+=0;
+				}
+				cek=0;
 }
