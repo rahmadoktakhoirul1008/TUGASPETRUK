@@ -36,9 +36,9 @@ cout<<endl;
 	
 	
 	///////////////////////// 
-	
+in:	
 cout<<endl;cout<<"masukkan 3 kata"<<endl;
-for(int i=0;i<3;i++){							//input kata
+for(int i=0;i<1;i++){							//input kata
 cout<<"Masukan kata : ";cin>>input;
 }
 	
@@ -118,76 +118,75 @@ for (int k=0;k<carikata;k++){						///Vertikal ATAS
 	cek=0;
 
 for (int k=0;k<carikata;k++){						//DIAGONAL KIRI ATAS
-					if (input[k]==kata[i-k][j-k]){
-						cek=k;
-					}
-					else{
-						break;
-					}
-				}
-				if (cek==carikata-1){
-					ditemukan+=1;
-				}
-				else{
-					ditemukan+=0;
-				}
-				cek=0;
+	if (input[k]==kata[i-k][j-k]){
+	cek=k;
+	}
+	else{
+	break;
+	}
+}
+	if (cek==carikata-1){
+	ditemukan+=1;
+	}
+	else{
+	ditemukan+=0;
+	}
+	cek=0;
 				
 			
 for (int k=0;k<carikata;k++){						//DIAGONAL KANAN ATAS
-					if (input[k]==kata[i-k][j+k]){
-						cek=k;
-					}
-					else{
-						break;
-					}
-				}
-				if (cek==carikata-1){
-					ditemukan+=1;
-				}
-				else{
-					ditemukan+=0;
-				}
-				cek=0;
-				for (int k=0;k<carikata;k++){		//DIAGONAL KIRI BAWAH																
-					if (input[k]==kata[i+k][j-k]){
-						cek=k;
-					}
-					else{
-						break;
-					}
-				}
-				if (cek==carikata-1){
-					ditemukan+=1;
-				}
-				else{
-					ditemukan+=0;
-				}
-				cek=0;
-				
-for (int k=0;k<carikata;k++){						//DIAGONAL KANAN BAWAH																
-					if (input[k]==kata[i+k][j+k]){
-						cek=k;
-					}
-					else{
-						break;
-					}
-				}
-				if (cek==carikata-1){
-					ditemukan+=1;
-				}
-				else{
-					ditemukan+=0;
-				}
-				cek=0;
-				
-			}
-			
-		}
+	if (input[k]==kata[i-k][j+k]){
+	cek=k;
 	}
+	else{
+	break;
+	}
+}
+	if (cek==carikata-1){
+	ditemukan+=1;
+	}
+	else{
+	ditemukan+=0;
+	}
+	cek=0;
+for (int k=0;k<carikata;k++){		//DIAGONAL KIRI BAWAH										
+	if (input[k]==kata[i+k][j-k]){
+	cek=k;
+	}
+	else{
+	break;
+	}
+}
+	if (cek==carikata-1){
+	ditemukan+=1;
+	}
+	else{
+	ditemukan+=0;
+	}
+	cek=0;
+				
+for (int k=0;k<carikata;k++){						//DIAGONAL KANAN BAWAH							if (input[k]==kata[i+k][j+k]){
+	cek=k;
+	}
+	else{
+	break;
+	}
+}
+	if (cek==carikata-1){
+	ditemukan+=1;
+	}
+	else{
+	ditemukan+=0;
+	}
+	cek=0;
+				
+}
+		
+}
+}
 
 	
-for(int i=0;i<3;i++){	
+for(int i=0;i<1;i++){	
 	if(ditemukan>0){
 		cout<<"ADA";
 	
@@ -196,7 +195,7 @@ else {
 	cout<<"TIDAK ADA";
 }	cout<<endl;
 }
-
+system ("pause");
+goto in;
 return 0;
 }
-				
