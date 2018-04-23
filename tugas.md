@@ -117,7 +117,7 @@ for (int k=0;k<carikata;k++){						///Vertikal ATAS
 	}
 	cek=0;
 
-for (int k=0;k<carikata;k++){										///DIAGONAL KIRI ATAS
+for (int k=0;k<carikata;k++){						//DIAGONAL KIRI ATAS
 					if (input[k]==kata[i-k][j-k]){
 						cek=k;
 					}
@@ -134,7 +134,7 @@ for (int k=0;k<carikata;k++){										///DIAGONAL KIRI ATAS
 				cek=0;
 				
 			
-for (int k=0;k<carikata;k++){											//DIAGONAL KANAN ATAS
+for (int k=0;k<carikata;k++){						//DIAGONAL KANAN ATAS
 					if (input[k]==kata[i-k][j+k]){
 						cek=k;
 					}
@@ -149,7 +149,7 @@ for (int k=0;k<carikata;k++){											//DIAGONAL KANAN ATAS
 					ditemukan+=0;
 				}
 				cek=0;
-				for (int k=0;k<carikata;k++){														///DIAGONAL KIRI BAWAH
+				for (int k=0;k<carikata;k++){		//DIAGONAL KIRI BAWAH																
 					if (input[k]==kata[i+k][j-k]){
 						cek=k;
 					}
@@ -165,8 +165,7 @@ for (int k=0;k<carikata;k++){											//DIAGONAL KANAN ATAS
 				}
 				cek=0;
 				
-	
-				for (int k=0;k<carikata;k++){													///DIAGONAL KANAN BAWAH
+for (int k=0;k<carikata;k++){						//DIAGONAL KANAN BAWAH																
 					if (input[k]==kata[i+k][j+k]){
 						cek=k;
 					}
@@ -188,14 +187,14 @@ for (int k=0;k<carikata;k++){											//DIAGONAL KANAN ATAS
 	}
 
 	
-		for(int i=0;i<3;i++){	
+for(int i=0;i<3;i++){	
 	if(ditemukan>0){
 		cout<<"ADA";
 	
-	}
-	else {
-		cout<<"TIDAK ADA";
-	}	cout<<endl;
+}
+else {
+	cout<<"TIDAK ADA";
+}	cout<<endl;
 }
 
 return 0;
