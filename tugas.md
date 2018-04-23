@@ -165,7 +165,8 @@ for (int k=0;k<carikata;k++){		//DIAGONAL KIRI BAWAH
 	}
 	cek=0;
 				
-for (int k=0;k<carikata;k++){						//DIAGONAL KANAN BAWAH							if (input[k]==kata[i+k][j+k]){
+for (int k=0;k<carikata;k++){						//DIAGONAL KANAN BAWAH						
+if (input[k]==kata[i+k][j+k]){
 	cek=k;
 	}
 	else{
@@ -180,8 +181,7 @@ for (int k=0;k<carikata;k++){						//DIAGONAL KANAN BAWAH							if (input[k]==ka
 	}
 	cek=0;
 				
-}
-		
+}	
 }
 }
 
