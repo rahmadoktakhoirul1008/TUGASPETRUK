@@ -149,5 +149,55 @@ for (int k=0;k<carikata;k++){											//DIAGONAL KANAN ATAS
 					ditemukan+=0;
 				}
 				cek=0;
+				for (int k=0;k<carikata;k++){														///DIAGONAL KIRI BAWAH
+					if (input[k]==kata[i+k][j-k]){
+						cek=k;
+					}
+					else{
+						break;
+					}
+				}
+				if (cek==carikata-1){
+					ditemukan+=1;
+				}
+				else{
+					ditemukan+=0;
+				}
+				cek=0;
 				
+	
+				for (int k=0;k<carikata;k++){													///DIAGONAL KANAN BAWAH
+					if (input[k]==kata[i+k][j+k]){
+						cek=k;
+					}
+					else{
+						break;
+					}
+				}
+				if (cek==carikata-1){
+					ditemukan+=1;
+				}
+				else{
+					ditemukan+=0;
+				}
+				cek=0;
+				
+			}
+			
+		}
+	}
+
+	
+		for(int i=0;i<3;i++){	
+	if(ditemukan>0){
+		cout<<"ADA";
+	
+	}
+	else {
+		cout<<"TIDAK ADA";
+	}	cout<<endl;
+}
+
+return 0;
+}
 				
